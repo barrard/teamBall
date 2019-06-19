@@ -1,0 +1,76 @@
+in terminal type 
+
+$ mysql-ctl start
+
+
+IMPORTING DATA INTO YOUR DATABASE
+To import existing data into your database run following commands:
+
+Shell
+$ mysql-ctl cli
+
+You are now in the MySQL environment and can start the import:
+
+Shell
+mysql> use c9
+mysql> source source mysql/ballshot.sql
+mysql> show tables;
+
+CONNECTING FROM PHP
+So now you know how to create a database, start the DB server, and access it via a
+command line tool. It's time for the real deal: accessing it from your code.
+
+In this example, we will connect from PHP:
+
+Create a new file and call it connect.php
+Copy/paste the following code in there and save the file:
+
+
+<?php
+    // A simple PHP script demonstrating how to connect to MySQL.
+    // Press the 'Run' button on the top to start the web server,
+    // then click the URL that is emitted to the Output tab of the console.
+
+    $servername = getenv('IP');
+    $username = getenv('C9_USER');
+    $password = "";
+    $database = "c9";
+    $dbport = 3306;
+
+    // Create connection
+    $db = new mysqli($servername, $username, $password, $database, $dbport);
+
+    // Check connection
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    } 
+    echo "Connected successfully (".$db->host_info.")";
+?>
+
+
+
+
+
+
+
+
+After creating the file:
+
+Run the code by right-clicking on the file name from the navigation pane then clicking 'Run'
+The output pane (usually on the bottom of your screen) shows 'Starting Apache httpd...'
+Click the link that is displayed after that (https://workspacename-username.c9.io/connect.php)
+A preview pane will open, showing 'Connected successfully (0.0.0.0 via TCP/IP)'.
+ Note
+
+MySQL socket file can be found in ~/lib/mysql/socket/mysql.sock
+
+Can I use my own MySQL credentials?
+Yes, this is possible. You can log into MySQL by entering 'mysql-ctl cli' then run the following lines to add a new user:
+
+MySQL
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION;
+Simply replace username / password in the code above with the username / password you want.
+
+
+
