@@ -30,8 +30,6 @@ CREATE TABLE IF NOT EXISTS `game` (
   `id` int(5) NOT NULL,
   `homeTeamId` int(4) NOT NULL,
   `visitorTeamId` int(4) NOT NULL,
-  `homeTeamScore` int(3) NOT NULL,
-  `visitorTeamScore` int(3) NOT NULL,
   `homeTeamName` varchar(35) NOT NULL,
   `visitorTeamName` varchar(35) NOT NULL,
   `dateString` varchar(25) NOT NULL

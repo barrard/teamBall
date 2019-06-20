@@ -12,7 +12,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
     <a class="full" href="<?php echo $actual_link ?>?page=login">Login</a>
     </div>
     <div class="button warning">
-    <a href="http://localhost/ballshot?page=register"><span class='success'>Register</span></a>
+    <a href="<?php echo $actual_link ?>?page=register"><span class='success'>Register</span></a>
   </div>
   </div>
   </div>
@@ -43,7 +43,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
   <?php if ($loggedin) { ?>
        <!-- <div id='NEWTEST'></div> -->
     <div class="alert button full"> 
-      <a href="http://localhost/ballshot?page=logout">Logout</a>
+      <a href="<?php echo $actual_link ?>?page=logout">Logout</a>
     </div>
 
     <?php 

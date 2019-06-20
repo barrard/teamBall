@@ -1,7 +1,6 @@
 <?php if (!empty($_POST['login'])){
 	$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
-
     if ($_POST['username']&& $_POST['password']) {
 	  $teamName = mysqli_real_escape_string($db, $_POST['username']);
 	  $password = mysqli_real_escape_string($db, hash('sha512', $_POST['password']));

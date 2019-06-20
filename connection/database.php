@@ -4,11 +4,11 @@
     // then click the URL that is emitted to the Output tab of the console.
 
 
-    $servername = "";
-    $username = "";
+    $servername = ('localhost');
+    $username = ('');
     $password = "";
-    $database = "";
-    $dbport = ;
+    $database = "TeamBall";
+    $dbport = 3306;
 
 
     // Create connection
