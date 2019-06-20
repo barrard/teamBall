@@ -2,9 +2,13 @@
 include 'connection/database.php';
 $sql ="SELECT * FROM teams WHERE teamId = $_SESSION[teamId]";
 $rsd = mysqli_query($db, $sql);
-while ($row = mysqli_fetch_array($rsd)) {
-	$teamName=$row['teamName'];
-} ?>
+if($rsd){
+
+	while ($row = mysqli_fetch_array($rsd)) {
+		$teamName=$row['teamName'];
+	} 
+}
+?>
 
 
 
@@ -30,8 +34,13 @@ $rsd = mysqli_query($db, $sql);
 					<?php 
 					$sql ="SELECT * FROM teams WHERE teamId != $_SESSION[teamId]";
 					$rsd = mysqli_query($db, $sql);
-					while ($row = mysqli_fetch_array($rsd)) {
-					echo "<option value=".$row['teamName'].">".$row['teamName']."</option>"; } ?>
+					if($rsd){
+
+						while ($row = mysqli_fetch_array($rsd)) {
+							echo "<option value=".$row['teamName'].">".$row['teamName']."</option>"; 
+						} 
+					}
+					?>
 				</select>
 			</div>
 		</div>
@@ -52,6 +61,7 @@ $rsd = mysqli_query($db, $sql);
 
 <div id='resultHistory'>
 <?php
+if(!$teamName) return;
 echo 'Hello <span id="homeName">'.$teamName.'</span>';
 echo '<br>';
 echo '<br>';
