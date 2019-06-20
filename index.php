@@ -10,12 +10,12 @@
   <div id='getStatsFromDB'></div>
   <div id='resumeGame'>resumeGame</div>
 <?php 
-//  echo 'teamName =  <span id="teamName">'.$_SESSION['teamName'].'</span><br>'; 
-//  echo 'teamId =  <span id="teamId">'.$_SESSION['teamId'].'</span><br>'; 
-//  echo 'opponentName = <span id="opponentName">'.$_SESSION['opponentName'].'</span><br>'; 
-//  echo 'opponentId =  <span id="opponentId">'.$_SESSION['opponentId'].'</span><br>'; 
-//  echo 'gameId =  <span id="gameId">'.$_SESSION['gameId'].'</span><br>'; 
-//  print_r($_SESSION); 
+ echo 'teamName =  <span id="teamName">'.$_SESSION['teamName'].'</span><br>'; 
+ echo 'teamId =  <span id="teamId">'.$_SESSION['teamId'].'</span><br>'; 
+ echo 'opponentName = <span id="opponentName">'.$_SESSION['opponentName'].'</span><br>'; 
+ echo 'opponentId =  <span id="opponentId">'.$_SESSION['opponentId'].'</span><br>'; 
+ echo 'gameId =  <span id="gameId">'.$_SESSION['gameId'].'</span><br>'; 
+ print_r($_SESSION); 
  ?>
 </div>
 

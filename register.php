@@ -1,5 +1,5 @@
 <?php 
-session_start();
+// session_start();
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
 $teamName='';
