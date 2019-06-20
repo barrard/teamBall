@@ -5,9 +5,9 @@
 
 
     $servername = ('localhost');
-    $username = ('debian-sys-maint');
-    $password = "YJ4v9VefYvtDtcX7";
-    $database = "Teamball";
+    $username = ('');
+    $password = "";
+    $database = "TeamBall";
     $dbport = 3306;
 
 
