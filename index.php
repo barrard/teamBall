@@ -6,7 +6,7 @@
   }elseif ($_GET['page']=='quitgame') {
     include 'quitGame.php';
   } }?>
-<div class='hidden'>
+<div class=''>
   <div id='getStatsFromDB'></div>
   <div id='resumeGame'>resumeGame</div>
 <?php 
