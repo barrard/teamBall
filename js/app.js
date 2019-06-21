@@ -300,6 +300,7 @@ function quitGame(){
 		if(xhr.readyState == 4 && xhr.status==200){
 			 location.reload();
 			console.log("Quit Game ");
+			console.log('reload')
 		};
 	};
 	xhr.open('GET', url, true);
