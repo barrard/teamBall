@@ -298,7 +298,7 @@ function quitGame(){
 
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == 4 && xhr.status==200){
-			//  location.reload();
+			 location.reload();
 			console.log("Quit Game ");
 		};
 	};

@@ -24,7 +24,7 @@ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
         <a href="#"><span class="secondary badge"><i class="fi-power"></i></span></a>
         <ul class="submenu menu vertical" data-submenu>
 
-          <li><a onclick='quitGame();'href="#matchUp">MatchUp!</a></li>
+          <li><a onclick='quitGame();' >MatchUp!</a></li>
           <li><a href="#">Two</a></li>
           <li><a href="#">three</a></li>
         </ul>
